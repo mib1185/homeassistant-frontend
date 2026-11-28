@@ -145,7 +145,9 @@ export class HaVoiceAssistantSetupDialog extends LitElement {
     return html`
       <ha-dialog
         .open=${this._open}
-        header-title="Voice Satellite setup"
+        header-title=${this.hass.localize(
+          "ui.panel.config.voice_assistants.satellite_wizard.title"
+        )}
         prevent-scrim-close
         @closed=${this._dialogClosed}
       >
